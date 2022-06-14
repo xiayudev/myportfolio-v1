@@ -1,0 +1,122 @@
+//
+	======================================================================
+		Name        : index.pug
+		Author      : xiayudev
+		Date        : 2022.06.07 | Tuesday at 16:11:45
+		Copyright   : COPYRIGHT
+		Description : This file is about main page.
+
+	======================================================================
+//-
+
+doctype html
+html(lang="en")
+	include components/head.pug
+	include components/mixins.pug
+	body
+		include components/header.pug
+		main 
+			section.main-content 
+				p Hi, my name is
+				h1 Xiayudev.
+				h2 I build things for the web.
+				p.description
+					|	I am a junior web developer and
+					|	freelancer. Currently, I am focused on 
+					|	building accesible, human-centered, responsive 
+					|	web app pages and applications.
+				a.btn-item.btn-resume Check out my blogs!
+			section.aboutme-section 
+				h2 #[span.number 01.] About me 
+				p(class="description abt-description").
+					Hello! I am xiayudev and I love creating some useful stuffs for the web and everything related to the internet and techs. My journey in web development started when I was curious about how web pages were built and started to edit them on devtools of Chrome web browser.
+				p(class="description abt-description").
+					Nowadays, I am still learning HTML y CSS. I know this path takes time but I will work smart, tough and gain the respect of the comunity.
+				p(class="description abt-description").
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis officiis ipsum similique suscipit sequi vel quos id? Architecto in repudiandae et expedita qui blanditiis laboriosam corrupti necessitatibus. Sapiente, fuga? Ad?
+				p(class="description abt-description")
+					| Lorem ipsum dolor sit amet, consectetur 
+					| adipisicing elit, sed do eiusmod tempor 
+					| incididunt ut labore et dolore magna 
+					| aliqua:
+				ul.description.list-tech
+					li React
+					li Node.js
+					li JavaScript(ES6+)
+					li WordPress
+					li Vue.js
+					li Python
+				.perfil-photo__container
+					picture.perfil-photo
+						img(src="https://picsum.photos/200", alt="Profile's photo")
+			section.experience-section
+				h2 #[span.number 02.] Where I've worked 
+				.experience-companies
+					a#table-1.companies Company
+					a#table-2.companies Company
+					a#table-3.companies Company
+					a#table-4.companies Company
+					a#table-5.companies Company
+					a#table-6.companies Company 
+				.experience-description-container
+					.experience-description#panel-1
+						h3 Developer #[span @ Company1]
+						p May 2022 - Present 
+						ul
+							li.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptate ut porro laboriosam placeat eveniet minima blanditiis molestiae iure numquam, fugit, deserunt voluptatem dicta perspiciatis alias amet beatae, debitis sapiente.
+								
+
+							li.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, atque ipsa ea aliquam fugiat consectetur suscipit dolor nesciunt, at nemo, iusto sit laudantium? Nihil, ullam? Ducimus facilis quidem soluta mollitia?
+							
+							li.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde veniam amet voluptatum alias nulla impedit praesentium minus perspiciatis deserunt ex quisquam velit, quod possimus eaque, nisi sapiente id accusantium? In.
+					.experience-description#panel-2
+						h3 Developer #[span @ Company2]
+						p May 2022 - Present 
+						ul
+							li.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptate ut porro laboriosam placeat eveniet minima blanditiis molestiae iure numquam, fugit, deserunt voluptatem dicta perspiciatis alias amet beatae, debitis sapiente.
+								
+
+							li.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, atque ipsa ea aliquam fugiat consectetur suscipit dolor nesciunt, at nemo, iusto sit laudantium? Nihil, ullam? Ducimus facilis quidem soluta mollitia?
+							
+							li.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde veniam amet voluptatum alias nulla impedit praesentium minus perspiciatis deserunt ex quisquam velit, quod possimus eaque, nisi sapiente id accusantium? In.
+			section.projects-section 
+				h2 #[span.number 03.] Some projects 
+				.projects-container
+					each _, i in Array(3)
+						-let n = i + 1
+						+main-projects("Featured Project", "Project Name", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor assumenda ipsa modi soluta reiciendis magnam alias praesentium nostrum unde a facilis aspernatur eveniet repudiandae, numquam vitae fugit nemo optio! Architecto.", n, "Editor-1", "Editor-2", "Editor-3", "Editor-4")
+			section.other-projects-section
+				h3.title Other Projects 
+				p.files View the archive 
+				.other-projects-container 
+					each _, i in Array(6)
+						-let n = i + 1
+						+other-projects("Lorem ipsum dolor sit amet, consectetur adipisicing.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", n, "Tech-1", "Tech-2", "Tech-3")
+				a(href="#").show-more.btn-item 
+					| Show more
+			section.get-in-touch
+				p.next 0.4 Whats Next?
+				h2 Get In Touch
+				p.description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, fuga qui, enim in nemo natus excepturi deserunt laborum voluptatibus pariatur sapiente corrupti non tempora illum eaque sed est, rerum hic.
+				a(href="#").hello.btn-item 
+					| Say hello 
+		footer
+			.social-medias 
+				a(href="htpps://github.com/xiayudev" target="_blank"): i.fa-brands.fa-github
+				a(href="htpps://github.com/xiayudev" target="_blank"): i.fa-brands.fa-instagram
+				a(href="htpps://twitter.com/J7Jeo" target="_blank"): i.fa-brands.fa-twitter
+				a(href="htpps://linkedin.com/in/josué-cerrón-tuesta-190a0a168" target="_blank"): i.fa-brands.fa-linkedin
+				a(href="htpps://codepen.io/thesunland7" target="_blank"): i.fa-brands.fa-codepen
+			p.copyright Built by #[a(href="https://github.com/xiayudev/my-portfolio-v1" target="_blank") xiayudev]&trade; 2022. All rights reserved.
+					
+ 
+ 
+
+
+

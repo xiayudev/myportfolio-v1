@@ -1,0 +1,30 @@
+//- Globals mixins
+
+//- Mixin for other-projects
+mixin other-projects(title, description, number, ...techs)
+    div(class="projects projects-" + number)
+        .sources
+            a(href="#").carpet: i.fa-regular.fa-folder
+            .externals
+                a(href="#").github: i.fa-brands.fa-github
+                a(href="#").external: i.fa-solid.fa-arrow-up-right-from-square
+        h3 #{title}
+        p.description #{description}
+        .techs 
+            for tech in techs
+                span.tech-name #{tech}
+
+//- Mixin for main-projects
+mixin main-projects(type, title, description, number, ...editors)
+    div(class="project-item project-item-" + number)
+        p #{type} 
+        h3 #{title}
+        p(class="description") #{description}
+        p.editors
+            for editor in editors
+                span.editor-name #{editor}
+        .hosted 
+            a(href="#").github
+                i.fa-brands.fa-github
+            a(href="#").netlify
+                i.fa-solid.fa-arrow-up-right-from-square

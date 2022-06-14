@@ -1,0 +1,29 @@
+@use "../abstracts" as *
+
+// Mixins
+@mixin h2-global-styles
+    margin-bottom: 30px
+    inline-size: 100%
+    font-size: 25px
+    font-weight: 600
+    display: grid
+    grid-template-columns: auto max-content 1fr
+    align-items: center
+    color: $lightest-slate
+
+@mixin h2-after
+    content: ""
+    inline-size: 100%
+    block-size: 1px
+    display: block
+    color: $navy
+    box-shadow: 10px 1px 0 0 currentColor
+
+@mixin span-counter
+    font: normal 1.6rem $font-mono
+    padding-right: 10px
+
+@mixin list-style
+    content: "▹"
+    color: $color-secondary
+    margin-right: 10px

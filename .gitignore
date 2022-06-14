@@ -1,0 +1,8 @@
+## settings
+*.json
+
+## node
+node_modules
+
+## source map from sass
+*.map
